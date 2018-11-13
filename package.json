@@ -1,0 +1,14 @@
+{
+  "name": "webh_test",
+  "version": "1.0.0",
+  "description": "test",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "demo"
+  ],
+  "author": "bear",
+  "license": "ISC"
+}
