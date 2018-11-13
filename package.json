@@ -1,14 +1,19 @@
 {
   "name": "webh_test",
   "version": "1.0.0",
-  "description": "test",
+  "description": "demo",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "demo"
   ],
   "author": "bear",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "mongoose": "^5.3.11"
+  }
 }
