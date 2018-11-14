@@ -4,7 +4,8 @@
   "description": "demo",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build:dist": "NODE_ENV=development webpack --config $npm_package_webpack --progress --colors",
+    "test": "NODE_ENV=production karma start"
   },
   "keywords": [
     "demo"
@@ -15,11 +16,5 @@
     "body-parser": "^1.18.3",
     "express": "^4.16.4",
     "mongoose": "^5.3.11"
-  }
-}
-{
-  "scripts": {
-    "build:dist": "NODE_ENV=development webpack --config $npm_package_webpack --progress --colors",
-    "test": "NODE_ENV=production karma start"
   }
 }
