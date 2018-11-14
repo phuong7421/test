@@ -2,7 +2,7 @@
 
 var express  = require('express'),
 bodyParser   = require('body-parser'),
-http         = require('https'),
+http         = require('http'),
 config       = require('./config'),
 server       = express(),
 mongoose     = require('mongoose'),
