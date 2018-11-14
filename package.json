@@ -17,3 +17,9 @@
     "mongoose": "^5.3.11"
   }
 }
+{
+  "scripts": {
+    "build:dist": "NODE_ENV=development webpack --config $npm_package_webpack --progress --colors",
+    "test": "NODE_ENV=production karma start"
+  }
+}
