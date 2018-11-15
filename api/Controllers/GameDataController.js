@@ -77,7 +77,7 @@ var convertedCurrentDate = new Date();
                 var convertedGameDate = new Date(game.date);
 if (convertedGameDate > convertedCurrentDate)
                 {
-                  if(games.length >= 1)
+                  if(games.length > 1)
                   {
                     requiredGame = games[i-1];
 
