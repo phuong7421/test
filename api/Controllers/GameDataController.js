@@ -1,10 +1,9 @@
 'use strict';
-
 var mongoose = require('mongoose');
 var TeamInfo = mongoose.model('TeamInfo');
 var GameSchedule = mongoose.model('GameSchedule');
-exports.processRequest = function(req, res) {
 
+exports.processRequest = function(req, res) {
 if (req.body.result.action == "schedule") {
     getTeamSchedule(req,res)
   }
@@ -13,11 +12,10 @@ if (req.body.result.action == "schedule") {
       getTeamInfo(req,res)
   }
 };
+
 function getTeamInfo(req,res)
 {
-
 let teamToSearch = req.body.result && req.body.result.parameters && req.body.result.parameters.team ? req.body.result.parameters.team : 'Unknown';
-
 TeamInfo.findOne({name:teamToSearch},function(err,teamExists)
       {
         if (err)
@@ -28,7 +26,6 @@ TeamInfo.findOne({name:teamToSearch},function(err,teamExists)
               source: 'team info'
           });
         }
-
 if (teamExists)
         {
           return res.json({
@@ -46,6 +43,7 @@ if (teamExists)
         }
       });
 }
+
 function getTeamSchedule(req,res)
 {
 let parameters = req.body.result.parameters;
@@ -68,11 +66,10 @@ let parameters = req.body.result.parameters;
           }
           if (games)
           {
-            var requiredGame=games[0];
+            var requiredGame;
             for (var i=0; i < games.length; i++)
             {
                 var game = games[i];
-
 var convertedCurrentDate = new Date();
                 var convertedGameDate = new Date(game.date);
 if (convertedGameDate > convertedCurrentDate)
@@ -80,7 +77,6 @@ if (convertedGameDate > convertedCurrentDate)
                   if(games.length > 1)
                   {
                     requiredGame = games[i-1];
-
 var winningStatement = "";
                     if (requiredGame.isWinner)
                     {
@@ -106,7 +102,6 @@ var winningStatement = "";
                 }
             }
 }
-
 });
       }
       else {
