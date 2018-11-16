@@ -68,7 +68,7 @@ let parameters = req.body.result.parameters;
           }
           if (games)
           {
-            var requiredGame;
+            var requiredGame=games[0];
             for (var i=0; i < games.length; i++)
             {
                 var game = games[i];
