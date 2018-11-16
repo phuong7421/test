@@ -56,7 +56,7 @@ let parameters = req.body.result.parameters;
       if (game_occurence == "previous")
       {
         //previous game
-        GameSchedule.findOne({opponent:team},function(err,games)
+        GameSchedule.find({opponent:team},function(err,games)
         {
           if (err)
           {
