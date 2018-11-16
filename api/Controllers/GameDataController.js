@@ -75,7 +75,7 @@ let parameters = req.body.result.parameters;
 
 var convertedCurrentDate = new Date();
                 var convertedGameDate = new Date(game.date);
-if (convertedGameDate > convertedCurrentDate)
+if (convertedGameDate < convertedCurrentDate)
                 {
                   if(games.length > 1)
                   {
