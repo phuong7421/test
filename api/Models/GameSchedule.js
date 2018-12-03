@@ -4,7 +4,7 @@ var Schema = mongoose.Schema;
 var GameSchedule = new Schema({
 
 date:{
- type:String,
+ type:Date,
  required:false
 },
 opponent:{
