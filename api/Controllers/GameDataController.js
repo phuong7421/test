@@ -64,6 +64,13 @@ let parameters = req.body.result.parameters;
             source: 'game schedule'
         });
             }
+          else {
+        return res.json({
+            speech: 'Cant find anything!',
+            displayText: 'Cant find anything!',
+            source: 'game schedule'
+        });
+      }
 }
 });
       }
