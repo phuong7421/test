@@ -59,8 +59,8 @@ let parameters = req.body.result.parameters;
           if (games)
           {
             return res.json({
-            speech: 'Next'+games.score,
-            displayText: 'Next'+games.score,
+            speech: 'Next'+games.opponent,
+            displayText: 'Next'+games.opponent,
             source: 'game schedule'
         });
             }
