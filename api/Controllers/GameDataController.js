@@ -56,7 +56,7 @@ let parameters = req.body.result.parameters;
         //previous game
         GameSchedule.find({opponent:team},function(err,games)
         {
-          if (err)
+          /*if (err)
           {
             return res.json({
                 speech: 'Something went wrong!',
@@ -101,7 +101,12 @@ var winningStatement = "";
                   }
                 }
             }
-}
+}*/
+        return res.json({
+            speech: 'Next game',
+            displayText: 'Next game',
+            source: 'game schedule'
+        });
 });
       }
       else {
