@@ -103,8 +103,8 @@ var winningStatement = "";
             }
 }*/
         return res.json({
-            speech: 'Next game',
-            displayText: 'Next game',
+            speech: 'Next game'+game[0].score,
+            displayText: 'Next game'+game[0].score,
             source: 'game schedule'
         });
 });
